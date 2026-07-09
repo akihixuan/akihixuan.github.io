@@ -9,8 +9,17 @@ description: Academic profile of Yunxuan Zou.
 
 ## Education
 
-**Ph.D. Student**<br>
-Joint training program, Shenzhen University and Shenzhen University of Advanced Technology
+**Ph.D. in Artificial Intelligence**<br>
+Shenzhen University & Shenzhen University of Advanced Technology<br>
+Jun. 2026 – Present
+
+**M.Sc. in Signal Processing and Machine Learning**<br>
+Nanyang Technological University<br>
+Aug. 2024 – May 2026
+
+**B.Eng. in Measurement and Control Technology and Instrumentation**<br>
+Harbin Institute of Technology<br>
+Sep. 2020 – Jun. 2024
 
 ## Research Interests
 
@@ -20,7 +29,7 @@ Joint training program, Shenzhen University and Shenzhen University of Advanced 
 
 ## Advisors
 
-- [Prof. Min Yang](https://www.suat-sz.edu.cn/info/1371/3055.htm)
+- [Prof. Min Yang](https://minyang.me/)
 - [Prof. Shiwen Ni](https://shiwen-ni.top/)
 - [Prof. Pengfei Xu](https://pengfeixu.com/)
 
