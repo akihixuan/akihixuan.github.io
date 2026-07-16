@@ -20,7 +20,7 @@ latest_posts:
 
 I am a Ph.D. student in a joint training program between [Shenzhen University](https://www.szu.edu.cn/) and [Shenzhen University of Advanced Technology](https://www.suat-sz.edu.cn/).
 
-I am fortunate to be advised by [Prof. Min Yang](https://minyang.me/), [Prof. Shiwen Ni](https://shiwen-ni.top/), and [Prof. Pengfei Xu](https://pengfeixu.com/).
+My doctoral research is jointly supervised by [Prof. Min Yang](https://minyang.me/), [Prof. Shiwen Ni](https://shiwen-ni.top/), and [Prof. Pengfei Xu](https://pengfeixu.com/). During my master's studies at Nanyang Technological University, my thesis was supervised by [Prof. Bihan Wen](https://personal.ntu.edu.sg/bihan.wen/) and [Dr. Satoshi Tsutsui](https://hellosatoshi.github.io/).
 
 My research interests lie at the intersection of **large language models (LLMs)** and **AI for Science (AI4S)**. I am particularly interested in developing intelligent and reliable AI systems that can support scientific reasoning, knowledge discovery, and research workflows.
 
