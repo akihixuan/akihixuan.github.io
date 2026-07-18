@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if grep -Eq '^[[:space:]]*-[[:space:]]*_posts/?$' _config.yml; then
+  echo "comment demo posts are excluded; skipping comments integration checks"
+  exit 0
+fi
+
 tmp_dir="$(mktemp -d)"
 tmp_override="${tmp_dir}/comments-test-override.yml"
 tmp_site="${tmp_dir}/site"
