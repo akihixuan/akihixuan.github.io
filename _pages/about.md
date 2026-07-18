@@ -1,11 +1,11 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: Ph.D. Student · Large Language Models · AI for Science
+subtitle: Ph.D. student in Artificial Intelligence
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: false # includes a list of news items
@@ -18,10 +18,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. student in a joint training program between [Shenzhen University](https://www.szu.edu.cn/) and [Shenzhen University of Advanced Technology](https://www.suat-sz.edu.cn/).
+I am a Ph.D. student in Artificial Intelligence at [Shenzhen University](https://www.szu.edu.cn/), participating in a joint doctoral training program with [Shenzhen University of Advanced Technology](https://www.suat-sz.edu.cn/). I am advised by [Prof. Min Yang](https://minyang.me/), [Prof. Shiwen Ni](https://shiwen-ni.top/), and [Prof. Pengfei Xu](https://pengfeixu.com/).
 
-My doctoral research is jointly supervised by [Prof. Min Yang](https://minyang.me/), [Prof. Shiwen Ni](https://shiwen-ni.top/), and [Prof. Pengfei Xu](https://pengfeixu.com/). During my master's studies at Nanyang Technological University, my thesis was supervised by [Prof. Bihan Wen](https://personal.ntu.edu.sg/bihan.wen/) and [Dr. Satoshi Tsutsui](https://hellosatoshi.github.io/).
+My research focuses on **large language models (LLMs)** and **AI for Science (AI4S)**, particularly reliable language-model-based systems for scientific reasoning, knowledge discovery, and research workflows.
 
-My research interests lie at the intersection of **large language models (LLMs)** and **AI for Science (AI4S)**. I am particularly interested in developing intelligent and reliable AI systems that can support scientific reasoning, knowledge discovery, and research workflows.
+Previously, I received an M.Sc. in Signal Processing and Machine Learning from [Nanyang Technological University](https://www.ntu.edu.sg/) and a B.Eng. in Measurement and Control Technology and Instrumentation from [Harbin Institute of Technology](https://www.hit.edu.cn/).
 
-I am always happy to connect with researchers working on related topics. Please feel free to reach me at [yunxuan002@e.ntu.edu.sg](mailto:yunxuan002@e.ntu.edu.sg).
+[Email](mailto:yunxuan002@e.ntu.edu.sg) · [GitHub](https://github.com/akihixuan)
