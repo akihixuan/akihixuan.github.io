@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if grep -Eq '^[[:space:]]*-[[:space:]]*_posts/?$' _config.yml; then
+  echo "distill demo post is excluded; skipping distill integration checks"
+  exit 0
+fi
+
 tmp_dir="$(mktemp -d)"
 tmp_override="${tmp_dir}/distill-override.yml"
 tmp_site="${tmp_dir}/site"
