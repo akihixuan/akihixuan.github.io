@@ -20,8 +20,19 @@ latest_posts:
 
 I am a Ph.D. student in Artificial Intelligence at [Shenzhen University](https://www.szu.edu.cn/), participating in a joint doctoral training program with [Shenzhen University of Advanced Technology](https://www.suat-sz.edu.cn/). I am advised by [Prof. Min Yang](https://minyang.me/), [Prof. Shiwen Ni](https://shiwen-ni.top/), and [Prof. Pengfei Xu](https://pengfeixu.com/).
 
-My research focuses on **large language models (LLMs)** and **AI for Science (AI4S)**, particularly reliable language-model-based systems for scientific reasoning, knowledge discovery, and research workflows.
+My research focuses on **large language models (LLMs)** and **AI for Science (AI4S)**.
 
-Previously, I received an M.Sc. in Signal Processing and Machine Learning from [Nanyang Technological University](https://www.ntu.edu.sg/) and a B.Eng. in Measurement and Control Technology and Instrumentation from [Harbin Institute of Technology](https://www.hit.edu.cn/).
+Previously, I received an M.Sc. in Computer Science from [Nanyang Technological University](https://www.ntu.edu.sg/) and a B.Eng. in Measurement and Control Technology and Instrumentation from [Harbin Institute of Technology](https://www.hit.edu.cn/).
 
 [Email](mailto:yunxuan002@e.ntu.edu.sg) · [GitHub](https://github.com/akihixuan)
+
+<p>
+  <a href="https://hits.sh/akihixuan.github.io/">
+    <img
+      src="https://hits.sh/akihixuan.github.io.svg?label=Page%20views&amp;color=b509ac&amp;labelColor=555555"
+      alt="Page views"
+    />
+  </a>
+  <br />
+  <small>since August 2026</small>
+</p>
