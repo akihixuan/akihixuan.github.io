@@ -24,7 +24,7 @@ My research focuses on **large language models (LLMs)** and **AI for Science (AI
 
 Previously, I received an M.Sc. in Computer Science from [Nanyang Technological University](https://www.ntu.edu.sg/) and a B.Eng. in Measurement and Control Technology and Instrumentation from [Harbin Institute of Technology](https://www.hit.edu.cn/).
 
-[Email](mailto:yunxuan002@e.ntu.edu.sg) · [GitHub](https://github.com/akihixuan)
+[Email](mailto:suat26070109@stu.suat-sz.edu.cn) · [GitHub](https://github.com/akihixuan)
 
 <p>
   <a href="https://hits.sh/akihixuan.github.io/">
