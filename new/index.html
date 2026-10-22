@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f7f8f2" />
+    <meta name="theme-color" content="#f5f3ec" />
     <meta
       name="description"
       content="Yunxuan Zou is a Ph.D. student in Artificial Intelligence at Shenzhen University. Research interests: large language models and AI for Science."
@@ -19,8 +19,11 @@
     <title>Yunxuan Zou — Language, Intelligence &amp; Discovery</title>
     <link rel="icon" type="image/svg+xml" href="./media/favicon.svg" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./analytics.css" />
     <script src="./content.js" defer></script>
     <script src="./app.js" defer></script>
+    <script src="./analytics-config.js" defer></script>
+    <script src="./analytics.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -70,6 +73,7 @@
     </svg>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
     <header class="site-header">
+      <div class="reading-progress" aria-hidden="true"></div>
       <div class="header-inner shell">
         <a class="brand" href="#top" aria-label="Yunxuan Zou, home"
           ><img src="./media/favicon.svg" alt="" width="33" height="33" /><span>Yunxuan Zou<span class="brand-dot">.</span></span></a
@@ -127,12 +131,12 @@
             ><span data-i18n="heroInstitution">Shenzhen University</span>
           </div>
         </div>
-        <figure class="hero-figure">
+        <figure class="hero-figure" aria-label="Abstract scientific orbital study">
           <div class="figure-top">
-            <span class="tiny-label" data-i18n="diagramCaption">CONNECTED BY CURIOSITY</span><span class="figure-spark" aria-hidden="true">✳</span>
+            <span class="tiny-label" data-i18n="diagramCaption">CONNECTED BY CURIOSITY</span><span class="figure-spark" aria-hidden="true">↗</span>
           </div>
           <div class="orbit-container">
-            <img class="orbit-image" src="./media/research-orbit.svg" width="500" height="390" alt="" fetchpriority="high" /><span
+            <img class="orbit-image" src="./media/research-orbit.svg" width="600" height="500" alt="" fetchpriority="high" /><span
               class="orbit-label label-language"
               data-i18n="diagramLanguage"
               >Language</span
@@ -140,13 +144,14 @@
             ><span class="orbit-label label-discovery" data-i18n="diagramDiscovery">Discovery</span>
           </div>
           <figcaption>
-            <span class="caption-index">FIG. 01</span><span data-i18n="diagramNote">A research journey across language, vision, and science.</span>
+            <span class="caption-index">FIG. 01 —</span><span data-i18n="diagramNote">A research journey across language, vision, and science.</span>
           </figcaption>
         </figure>
       </section>
 
       <section class="about-section shell" id="about" aria-labelledby="about-title">
-        <div>
+        <div class="about-heading">
+          <span class="section-mark" aria-hidden="true">00</span>
           <p class="eyebrow" data-i18n="aboutLabel">A LITTLE ABOUT ME</p>
           <h2 id="about-title" data-i18n="aboutTitle">Curiosity, across disciplines.</h2>
         </div>
@@ -170,6 +175,7 @@
 
       <section class="section research-section shell" id="research" aria-labelledby="research-title">
         <header class="section-heading">
+          <span class="section-mark" aria-hidden="true">01</span>
           <p class="eyebrow" data-i18n="researchEyebrow">01 / RESEARCH INTERESTS</p>
           <h2 id="research-title" data-i18n="researchTitle">Language meets science.</h2>
           <p class="section-lead" data-i18n="researchLead">Two connected directions shape my current research interests.</p>
@@ -213,6 +219,7 @@
 
       <section class="section projects-section shell" id="projects" aria-labelledby="projects-title">
         <header class="section-heading">
+          <span class="section-mark" aria-hidden="true">02</span>
           <p class="eyebrow" data-i18n="projectsEyebrow">02 / SELECTED PROJECT</p>
           <h2 id="projects-title" data-i18n="projectsTitle">From perception to reasoning.</h2>
           <p class="section-lead" data-i18n="projectsLead">My master’s research at Nanyang Technological University.</p>
@@ -270,6 +277,7 @@
 
       <section class="section publications-section shell" id="publications" aria-labelledby="publications-title">
         <header class="section-heading">
+          <span class="section-mark" aria-hidden="true">03</span>
           <p class="eyebrow" data-i18n="publicationsEyebrow">03 / PUBLICATIONS &amp; WRITING</p>
           <h2 id="publications-title" data-i18n="publicationsTitle">Research, in writing.</h2>
         </header>
@@ -302,6 +310,7 @@
 
       <section class="section education-section shell" id="education" aria-labelledby="education-title">
         <header class="section-heading">
+          <span class="section-mark" aria-hidden="true">04</span>
           <p class="eyebrow" data-i18n="educationEyebrow">04 / EDUCATION</p>
           <h2 id="education-title" data-i18n="educationTitle">The path so far.</h2>
         </header>
@@ -378,6 +387,11 @@
         ><a href="#top" class="text-link"
           ><span data-i18n="footerTop">Back to top</span><svg class="icon up-arrow"><use href="#arrow" /></svg
         ></a>
+      </div>
+      <div class="site-analytics" data-site-analytics>
+        <span class="analytics-visits"><span data-analytics-label>Visits</span> <strong data-analytics-count>—</strong></span>
+        <span class="analytics-note" data-analytics-note>Statistics pending</span>
+        <a data-analytics-dashboard hidden target="_blank" rel="noopener noreferrer">Analytics ↗</a>
       </div>
     </footer>
     <dialog id="citation-dialog" aria-labelledby="citation-title">

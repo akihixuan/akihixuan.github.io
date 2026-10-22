@@ -1,0 +1,42 @@
+.site-analytics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+  width: 100%;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.analytics-visits {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--mono);
+}
+.analytics-visits strong {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.site-analytics [data-analytics-dashboard] {
+  margin-left: auto;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line);
+}
+.site-analytics [data-analytics-dashboard]:hover {
+  color: var(--accent);
+}
+.site-analytics [hidden] {
+  display: none;
+}
+@media (max-width: 560px) {
+  .analytics-note {
+    flex-basis: 100%;
+    order: 3;
+  }
+}

@@ -1,1 +1,181 @@
-(()=>{"use strict";function t(){u.classList.remove("open"),g.setAttribute("aria-expanded","false"),g.setAttribute("aria-label",window.siteContent[d].menuLabel)}function e(e){d=e;const n=window.siteContent[d];document.documentElement.lang="zh"===d?"zh-CN":"en",document.title=n.pageTitle,c('meta[name="description"]').content=n.pageDescription,c('meta[property="og:title"]').content=n.pageTitle,c('meta[property="og:description"]').content=n.pageDescription,s("[data-i18n]").forEach(t=>{t.textContent=n[t.dataset.i18n]}),s("[data-i18n-html]").forEach(t=>{t.innerHTML=n[t.dataset.i18nHtml]}),c("#language-switch").setAttribute("aria-label",n.languageLabel),c(".lang-en").classList.toggle("active","en"===d),c(".lang-zh").classList.toggle("active","zh"===d),c("#copy-email").setAttribute("aria-label",n.contactCopy),c("#theme-toggle").setAttribute("aria-label",n.themeLabel),c("#close-citation").setAttribute("aria-label",n.citationClose),u.setAttribute("aria-label","zh"===d?"\u4e3b\u5bfc\u822a":"Main navigation"),r.set("yz-language",d),t()}function n(t){document.documentElement.dataset.theme=t,c('meta[name="theme-color"]').content="dark"===t?"#141e19":"#f8f9f4",c("#theme-toggle").setAttribute("aria-pressed",String("dark"===t)),r.set("yz-theme",t)}function i(t){if(clearTimeout(l),m.open)return c("#citation-status").textContent=t,void(l=setTimeout(()=>{c("#citation-status").textContent=""},3500));c("#toast").textContent=t,c("#toast").classList.add("show"),l=setTimeout(()=>c("#toast").classList.remove("show"),3500)}async function a(t){try{await navigator.clipboard.writeText(t),i(window.siteContent[d].copied)}catch{const e=document.createElement("textarea");e.value=t,e.style.cssText="position:fixed;opacity:0;inset:0;pointer-events:none",(m.open?m:document.body).append(e),e.focus(),e.select();let n=!1;try{n=document.execCommand("copy")}catch{}e.remove(),i(window.siteContent[d][n?"copied":"copyError"]),m.open&&c("#copy-citation").focus()}}function o(){let t="about";["about","research","projects","publications","education"].forEach(e=>{document.getElementById(e).getBoundingClientRect().top<=175&&(t=e)}),s(".main-nav a").forEach(e=>{const n=e.getAttribute("href")==="#"+t;e.classList.toggle("active",n),n?e.setAttribute("aria-current","location"):e.removeAttribute("aria-current")}),b=!1}const c=t=>document.querySelector(t),s=t=>[...document.querySelectorAll(t)],r={get(t){try{return localStorage.getItem(t)}catch{return null}},set(t,e){try{localStorage.setItem(t,e)}catch{}}};let l,d="zh"===r.get("yz-language")?"zh":"en";const u=c("#main-nav"),g=c("#menu-toggle"),m=c("#citation-dialog");c("#language-switch").addEventListener("click",()=>e("en"===d?"zh":"en")),c("#theme-toggle").addEventListener("click",()=>n("dark"===document.documentElement.dataset.theme?"light":"dark")),g.addEventListener("click",()=>{const t=u.classList.toggle("open");g.setAttribute("aria-expanded",String(t)),g.setAttribute("aria-label",window.siteContent[d][t?"closeMenuLabel":"menuLabel"])}),s(".main-nav a").forEach(e=>e.addEventListener("click",t)),document.addEventListener("keydown",e=>{"Escape"===e.key&&t()}),document.addEventListener("click",e=>{e.target.closest(".site-header")||t()}),window.matchMedia("(min-width: 701px)").addEventListener("change",t),c("#bibtex-code").textContent=window.siteConfig.bibtex;const p=new Blob([window.siteConfig.bibtex+"\n"],{type:"application/x-bibtex;charset=utf-8"});c("#download-citation").href=URL.createObjectURL(p),c("#cite-button").addEventListener("click",()=>m.showModal()),c("#close-citation").addEventListener("click",()=>m.close()),m.addEventListener("close",()=>{c("#citation-status").textContent=""}),m.addEventListener("click",t=>{if(t.target!==m)return;const e=m.getBoundingClientRect();(t.clientX<e.left||t.clientX>e.right||t.clientY<e.top||t.clientY>e.bottom)&&m.close()}),c("#copy-citation").addEventListener("click",()=>a(window.siteConfig.bibtex)),c("#copy-email").addEventListener("click",()=>a(window.siteConfig.email));let b=!1;window.addEventListener("scroll",()=>{b||(requestAnimationFrame(o),b=!0)},{passive:!0}),e(d),n("dark"===r.get("yz-theme")?"dark":"light"),o()})();
+(() => {
+  "use strict";
+  document.documentElement.classList.add("js");
+  const $ = (selector) => document.querySelector(selector);
+  const $$ = (selector) => [...document.querySelectorAll(selector)];
+  const storage = {
+    get(key) {
+      try {
+        return localStorage.getItem(key);
+      } catch {
+        return null;
+      }
+    },
+    set(key, value) {
+      try {
+        localStorage.setItem(key, value);
+      } catch {
+        /* Page works without storage. */
+      }
+    },
+  };
+  let language = storage.get("yz-language") === "zh" ? "zh" : "en";
+  let toastTimer;
+  const menu = $("#main-nav");
+  const menuButton = $("#menu-toggle");
+  const citationDialog = $("#citation-dialog");
+
+  function closeMenu() {
+    menu.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", window.siteContent[language].menuLabel);
+  }
+  function applyLanguage(nextLanguage) {
+    language = nextLanguage;
+    const copy = window.siteContent[language];
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    document.title = copy.pageTitle;
+    $('meta[name="description"]').content = copy.pageDescription;
+    $('meta[property="og:title"]').content = copy.pageTitle;
+    $('meta[property="og:description"]').content = copy.pageDescription;
+    $$("[data-i18n]").forEach((el) => {
+      el.textContent = copy[el.dataset.i18n];
+    });
+    // HTML translations are authored locally in content.js, never taken from visitor input.
+    $$("[data-i18n-html]").forEach((el) => {
+      el.innerHTML = copy[el.dataset.i18nHtml];
+    });
+    $("#language-switch").setAttribute("aria-label", copy.languageLabel);
+    $(".lang-en").classList.toggle("active", language === "en");
+    $(".lang-zh").classList.toggle("active", language === "zh");
+    $("#copy-email").setAttribute("aria-label", copy.contactCopy);
+    $("#theme-toggle").setAttribute("aria-label", copy.themeLabel);
+    $("#close-citation").setAttribute("aria-label", copy.citationClose);
+    menu.setAttribute("aria-label", language === "zh" ? "主导航" : "Main navigation");
+    storage.set("yz-language", language);
+    closeMenu();
+    document.dispatchEvent(new CustomEvent("yz:language-change", { detail: { language } }));
+  }
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    $('meta[name="theme-color"]').content = theme === "dark" ? "#141c19" : "#f5f3ec";
+    $("#theme-toggle").setAttribute("aria-pressed", String(theme === "dark"));
+    storage.set("yz-theme", theme);
+  }
+  function toast(message) {
+    clearTimeout(toastTimer);
+    if (citationDialog.open) {
+      $("#citation-status").textContent = message;
+      toastTimer = setTimeout(() => {
+        $("#citation-status").textContent = "";
+      }, 3500);
+      return;
+    }
+    $("#toast").textContent = message;
+    $("#toast").classList.add("show");
+    toastTimer = setTimeout(() => $("#toast").classList.remove("show"), 3500);
+  }
+  async function copyText(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast(window.siteContent[language].copied);
+    } catch {
+      const input = document.createElement("textarea");
+      input.value = text;
+      input.style.cssText = "position:fixed;opacity:0;inset:0;pointer-events:none";
+      (citationDialog.open ? citationDialog : document.body).append(input);
+      input.focus();
+      input.select();
+      let success = false;
+      try {
+        success = document.execCommand("copy");
+      } catch {
+        /* Fall through to the manual copy message. */
+      }
+      input.remove();
+      toast(window.siteContent[language][success ? "copied" : "copyError"]);
+      if (citationDialog.open) $("#copy-citation").focus();
+    }
+  }
+
+  $("#language-switch").addEventListener("click", () => applyLanguage(language === "en" ? "zh" : "en"));
+  $("#theme-toggle").addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
+  menuButton.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", window.siteContent[language][isOpen ? "closeMenuLabel" : "menuLabel"]);
+  });
+  $$(".main-nav a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".site-header")) closeMenu();
+  });
+  window.matchMedia("(min-width: 901px)").addEventListener("change", closeMenu);
+
+  $("#bibtex-code").textContent = window.siteConfig.bibtex;
+  const bibtexBlob = new Blob([window.siteConfig.bibtex + "\n"], { type: "application/x-bibtex;charset=utf-8" });
+  $("#download-citation").href = URL.createObjectURL(bibtexBlob);
+  $("#cite-button").addEventListener("click", () => citationDialog.showModal());
+  $("#close-citation").addEventListener("click", () => citationDialog.close());
+  citationDialog.addEventListener("close", () => {
+    $("#citation-status").textContent = "";
+  });
+  citationDialog.addEventListener("click", (event) => {
+    if (event.target !== citationDialog) return;
+    const box = citationDialog.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) citationDialog.close();
+  });
+  $("#copy-citation").addEventListener("click", () => copyText(window.siteConfig.bibtex));
+  $("#copy-email").addEventListener("click", () => copyText(window.siteConfig.email));
+
+  let scrollScheduled = false;
+  function updateNavigation() {
+    const sections = ["about", "research", "projects", "publications", "education"];
+    let active = "about";
+    sections.forEach((id) => {
+      if (document.getElementById(id).getBoundingClientRect().top <= 175) active = id;
+    });
+    $$(".main-nav a").forEach((link) => {
+      const isActive = link.getAttribute("href") === "#" + active;
+      link.classList.toggle("active", isActive);
+      if (isActive) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+    const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+    document.documentElement.style.setProperty("--scroll-progress", scrollRange > 0 ? Math.min(1, window.scrollY / scrollRange) : 0);
+    document.querySelector(".site-header").classList.toggle("is-scrolled", window.scrollY > 20);
+    scrollScheduled = false;
+  }
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollScheduled) {
+        requestAnimationFrame(updateNavigation);
+        scrollScheduled = true;
+      }
+    },
+    { passive: true }
+  );
+  // Content stays visible by default. Only animate elements once they enter the viewport.
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if ("IntersectionObserver" in window && !reducedMotion.matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08 }
+    );
+    $$(".about-section, .section-heading, .research-item, .project-card, .publication, .education-item, .contact-inner").forEach((element) => {
+      revealObserver.observe(element);
+    });
+  }
+  applyLanguage(language);
+  setTheme(storage.get("yz-theme") === "dark" ? "dark" : "light");
+  updateNavigation();
+})();
