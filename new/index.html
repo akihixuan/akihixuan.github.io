@@ -1,110 +1,402 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8f2">
-  <meta name="description" content="Yunxuan Zou is a Ph.D. student in Artificial Intelligence at Shenzhen University. Research interests: large language models and AI for Science.">
-  <meta property="og:title" content="Yunxuan Zou — Academic Homepage">
-  <meta property="og:description" content="Language, intelligence, and scientific discovery. Research, projects, writing, and academic background.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://akihixuan.github.io/new/">
-  <link rel="canonical" href="https://akihixuan.github.io/new/">
-  <title>Yunxuan Zou — Language, Intelligence &amp; Discovery</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./content.js" defer></script>
-  <script src="./app.js" defer></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Yunxuan Zou","jobTitle":"Ph.D. student in Artificial Intelligence","url":"https://akihixuan.github.io/new/","sameAs":["https://github.com/akihixuan","https://akihixuan.github.io/"],"affiliation":{"@type":"CollegeOrUniversity","name":"Shenzhen University"},"knowsAbout":["Large Language Models","AI for Science","Egocentric Vision"]}</script>
-</head>
-<body>
-  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
-    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
-    <symbol id="external" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
-    <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></symbol>
-    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
-    <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
-    <symbol id="pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
-    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
-    <symbol id="moon" viewBox="0 0 24 24"><path d="M20.4 15.2A9 9 0 0 1 8.8 3.6 9 9 0 1 0 20.4 15.2Z"/></symbol>
-    <symbol id="github" viewBox="0 0 24 24"><path d="M9 20c-5 1.5-5-2.5-7-3m14 5v-4a3.5 3.5 0 0 0-1-2.5c3.5-.4 7-1.7 7-7.5a5.8 5.8 0 0 0-1.5-4c.1-.4.6-2-.2-4 0 0-1.3-.4-4.3 1.6a15 15 0 0 0-8 0C5 .6 3.7 1 3.7 1c-.8 2-.3 3.6-.2 4A5.8 5.8 0 0 0 2 9c0 5.8 3.5 7.1 7 7.5A3.5 3.5 0 0 0 8 19v3" transform="translate(1 0) scale(.9)"/></symbol>
-    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
-    <symbol id="book" viewBox="0 0 24 24"><path d="M4 3h13a2 2 0 0 1 2 2v16H6a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Zm0 14h15M8 7h7M8 10h5"/></symbol>
-  </defs></svg>
-  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
-  <header class="site-header">
-    <div class="header-inner shell">
-      <a class="brand" href="#top" aria-label="Yunxuan Zou, home"><img src="./assets/favicon.svg" alt="" width="33" height="33"><span>Yunxuan Zou<span class="brand-dot">.</span></span></a>
-      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-        <a href="#about" data-i18n="navAbout">About</a><a href="#research" data-i18n="navResearch">Research</a><a href="#projects" data-i18n="navProjects">Projects</a><a href="#publications" data-i18n="navPublications">Publications</a><a href="#education" data-i18n="navEducation">Education</a>
-      </nav>
-      <div class="header-controls">
-        <button class="language-switch" id="language-switch" type="button" aria-label="切换到中文"><span class="lang-en active">EN</span><span class="language-divider">/</span><span class="lang-zh">中</span></button>
-        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme"><svg class="icon moon-icon"><use href="#moon"/></svg><svg class="icon sun-icon"><use href="#sun"/></svg></button>
-        <button class="menu-toggle icon-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8f2" />
+    <meta
+      name="description"
+      content="Yunxuan Zou is a Ph.D. student in Artificial Intelligence at Shenzhen University. Research interests: large language models and AI for Science."
+    />
+    <meta property="og:title" content="Yunxuan Zou — Academic Homepage" />
+    <meta
+      property="og:description"
+      content="Language, intelligence, and scientific discovery. Research, projects, writing, and academic background."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akihixuan.github.io/new/" />
+    <link rel="canonical" href="https://akihixuan.github.io/new/" />
+    <title>Yunxuan Zou — Language, Intelligence &amp; Discovery</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./content.js" defer></script>
+    <script src="./app.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yunxuan Zou",
+        "jobTitle": "Ph.D. student in Artificial Intelligence",
+        "url": "https://akihixuan.github.io/new/",
+        "sameAs": ["https://github.com/akihixuan", "https://akihixuan.github.io/"],
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Shenzhen University" },
+        "knowsAbout": ["Large Language Models", "AI for Science", "Egocentric Vision"]
+      }
+    </script>
+  </head>
+  <body>
+    <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></symbol>
+        <symbol id="external" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12" /></symbol>
+        <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" /></symbol>
+        <symbol id="mail" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="m3 6 9 7 9-7" />
+        </symbol>
+        <symbol id="copy" viewBox="0 0 24 24">
+          <rect x="8" y="8" width="12" height="13" rx="2" />
+          <path d="M16 8V3H3v13h5" />
+        </symbol>
+        <symbol id="pin" viewBox="0 0 24 24">
+          <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
+          <circle cx="12" cy="10" r="2" />
+        </symbol>
+        <symbol id="sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+        </symbol>
+        <symbol id="moon" viewBox="0 0 24 24"><path d="M20.4 15.2A9 9 0 0 1 8.8 3.6 9 9 0 1 0 20.4 15.2Z" /></symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+          <path
+            d="M9 20c-5 1.5-5-2.5-7-3m14 5v-4a3.5 3.5 0 0 0-1-2.5c3.5-.4 7-1.7 7-7.5a5.8 5.8 0 0 0-1.5-4c.1-.4.6-2-.2-4 0 0-1.3-.4-4.3 1.6a15 15 0 0 0-8 0C5 .6 3.7 1 3.7 1c-.8 2-.3 3.6-.2 4A5.8 5.8 0 0 0 2 9c0 5.8 3.5 7.1 7 7.5A3.5 3.5 0 0 0 8 19v3"
+            transform="translate(1 0) scale(.9)"
+          />
+        </symbol>
+        <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+        <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6" /></symbol>
+        <symbol id="book" viewBox="0 0 24 24"><path d="M4 3h13a2 2 0 0 1 2 2v16H6a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Zm0 14h15M8 7h7M8 10h5" /></symbol>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner shell">
+        <a class="brand" href="#top" aria-label="Yunxuan Zou, home"
+          ><img src="./assets/favicon.svg" alt="" width="33" height="33" /><span>Yunxuan Zou<span class="brand-dot">.</span></span></a
+        >
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="#about" data-i18n="navAbout">About</a><a href="#research" data-i18n="navResearch">Research</a
+          ><a href="#projects" data-i18n="navProjects">Projects</a><a href="#publications" data-i18n="navPublications">Publications</a
+          ><a href="#education" data-i18n="navEducation">Education</a>
+        </nav>
+        <div class="header-controls">
+          <button class="language-switch" id="language-switch" type="button" aria-label="切换到中文">
+            <span class="lang-en active">EN</span><span class="language-divider">/</span><span class="lang-zh">中</span>
+          </button>
+          <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">
+            <svg class="icon moon-icon"><use href="#moon" /></svg><svg class="icon sun-icon"><use href="#sun" /></svg>
+          </button>
+          <button
+            class="menu-toggle icon-button"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main id="main">
-    <section class="hero shell" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <div class="eyebrow hero-eyebrow"><span class="status-dot"></span><span data-i18n="heroRole">PH.D. STUDENT IN ARTIFICIAL INTELLIGENCE</span></div>
-        <h1 id="hero-title" data-i18n="heroName">Yunxuan Zou</h1>
-        <p class="hero-statement"><span data-i18n="heroLine1">Language. Intelligence.</span><br><span class="text-accent" data-i18n="heroLine2">Scientific discovery.</span></p>
-        <p class="hero-intro" data-i18n="heroIntro">I study large language models and AI for Science, exploring the connection between intelligent systems and scientific inquiry.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#research"><span data-i18n="heroResearch">Explore my research</span><svg class="icon"><use href="#arrow"/></svg></a><a class="text-link" href="./assets/Yunxuan_Zou_CV.pdf" target="_blank" rel="noopener noreferrer"><span data-i18n="heroCV">View CV</span><svg class="icon"><use href="#external"/></svg></a></div>
-        <div class="hero-location"><svg class="icon"><use href="#pin"/></svg><span data-i18n="location">Shenzhen, China</span><span class="location-rule"></span><span data-i18n="heroInstitution">Shenzhen University</span></div>
+    <main id="main">
+      <section class="hero shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow hero-eyebrow">
+            <span class="status-dot"></span><span data-i18n="heroRole">PH.D. STUDENT IN ARTIFICIAL INTELLIGENCE</span>
+          </div>
+          <h1 id="hero-title" data-i18n="heroName">Yunxuan Zou</h1>
+          <p class="hero-statement">
+            <span data-i18n="heroLine1">Language. Intelligence.</span><br /><span class="text-accent" data-i18n="heroLine2"
+              >Scientific discovery.</span
+            >
+          </p>
+          <p class="hero-intro" data-i18n="heroIntro">
+            I study large language models and AI for Science, exploring the connection between intelligent systems and scientific inquiry.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research"
+              ><span data-i18n="heroResearch">Explore my research</span><svg class="icon"><use href="#arrow" /></svg></a
+            ><a class="text-link" href="./assets/Yunxuan_Zou_CV.pdf" target="_blank" rel="noopener noreferrer"
+              ><span data-i18n="heroCV">View CV</span><svg class="icon"><use href="#external" /></svg
+            ></a>
+          </div>
+          <div class="hero-location">
+            <svg class="icon"><use href="#pin" /></svg><span data-i18n="location">Shenzhen, China</span><span class="location-rule"></span
+            ><span data-i18n="heroInstitution">Shenzhen University</span>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <div class="figure-top">
+            <span class="tiny-label" data-i18n="diagramCaption">CONNECTED BY CURIOSITY</span><span class="figure-spark" aria-hidden="true">✳</span>
+          </div>
+          <div class="orbit-container">
+            <img class="orbit-image" src="./assets/research-orbit.svg" width="500" height="390" alt="" fetchpriority="high" /><span
+              class="orbit-label label-language"
+              data-i18n="diagramLanguage"
+              >Language</span
+            ><span class="orbit-label label-intelligence" data-i18n="diagramIntelligence">Intelligence</span
+            ><span class="orbit-label label-discovery" data-i18n="diagramDiscovery">Discovery</span>
+          </div>
+          <figcaption>
+            <span class="caption-index">FIG. 01</span><span data-i18n="diagramNote">A research journey across language, vision, and science.</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="about-section shell" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow" data-i18n="aboutLabel">A LITTLE ABOUT ME</p>
+          <h2 id="about-title" data-i18n="aboutTitle">Curiosity, across disciplines.</h2>
+        </div>
+        <div class="about-copy">
+          <p data-i18n-html="aboutText">
+            I am a Ph.D. student in Artificial Intelligence at
+            <a href="https://www.szu.edu.cn/" target="_blank" rel="noopener noreferrer">Shenzhen University</a>, in a joint doctoral training program
+            with <a href="https://www.suat-sz.edu.cn/" target="_blank" rel="noopener noreferrer">Shenzhen University of Advanced Technology</a>.
+          </p>
+          <p data-i18n-html="aboutAdvisors">
+            I am advised by <a href="https://minyang.me/" target="_blank" rel="noopener noreferrer">Prof. Min Yang</a>,
+            <a href="https://shiwen-ni.top/" target="_blank" rel="noopener noreferrer">Prof. Shiwen Ni</a>, and
+            <a href="https://pengfeixu.com/" target="_blank" rel="noopener noreferrer">Prof. Pengfei Xu</a>.
+          </p>
+          <p data-i18n="aboutPast">
+            Previously, I received my M.Sc. in Computer Science from Nanyang Technological University and my B.Eng. from Harbin Institute of
+            Technology.
+          </p>
+        </div>
+      </section>
+
+      <section class="section research-section shell" id="research" aria-labelledby="research-title">
+        <header class="section-heading">
+          <p class="eyebrow" data-i18n="researchEyebrow">01 / RESEARCH INTERESTS</p>
+          <h2 id="research-title" data-i18n="researchTitle">Language meets science.</h2>
+          <p class="section-lead" data-i18n="researchLead">Two connected directions shape my current research interests.</p>
+        </header>
+        <div class="research-grid">
+          <article class="research-item">
+            <div class="research-item-top">
+              <span class="research-symbol" aria-hidden="true"
+                ><svg viewBox="0 0 44 44">
+                  <path d="M8 9h28v20H23l-9 7v-7H8Z" />
+                  <path d="M15 16h14M15 22h9" /></svg></span
+              ><span class="research-number">01</span>
+            </div>
+            <p class="tiny-label" data-i18n="llmTag">LANGUAGE &amp; INTELLIGENCE</p>
+            <h3 data-i18n="llmTitle">Large Language Models</h3>
+            <p data-i18n="llmText">
+              Understanding and working with language models is a central focus of my doctoral research in artificial intelligence.
+            </p>
+          </article>
+          <article class="research-item">
+            <div class="research-item-top">
+              <span class="research-symbol" aria-hidden="true"
+                ><svg viewBox="0 0 44 44">
+                  <ellipse cx="22" cy="22" rx="18" ry="7" transform="rotate(45 22 22)" />
+                  <ellipse cx="22" cy="22" rx="18" ry="7" transform="rotate(-45 22 22)" />
+                  <circle cx="22" cy="22" r="2" /></svg></span
+              ><span class="research-number">02</span>
+            </div>
+            <p class="tiny-label" data-i18n="scienceTag">INTELLIGENCE &amp; DISCOVERY</p>
+            <h3 data-i18n="scienceTitle">AI for Science</h3>
+            <p data-i18n="scienceText">
+              Exploring how artificial intelligence can support scientific inquiry and open new possibilities for discovery.
+            </p>
+          </article>
+        </div>
+        <div class="research-foundations">
+          <span class="tiny-label" data-i18n="foundationsLabel">RESEARCH FOUNDATIONS</span>
+          <p data-i18n="foundationsText">Egocentric vision · 3D hand reconstruction · Neuro-symbolic reasoning</p>
+        </div>
+      </section>
+
+      <section class="section projects-section shell" id="projects" aria-labelledby="projects-title">
+        <header class="section-heading">
+          <p class="eyebrow" data-i18n="projectsEyebrow">02 / SELECTED PROJECT</p>
+          <h2 id="projects-title" data-i18n="projectsTitle">From perception to reasoning.</h2>
+          <p class="section-lead" data-i18n="projectsLead">My master’s research at Nanyang Technological University.</p>
+        </header>
+        <article class="project-card">
+          <figure class="project-figure">
+            <div class="tiny-label" data-i18n="projectVisualLabel">GEOMETRY → STATES → REASONING</div>
+            <img src="./assets/hand-study.svg" width="400" height="390" alt="" loading="lazy" />
+            <figcaption>
+              <span class="caption-index">FIG. 02</span><span data-i18n="projectVisualNote">Conceptual method illustration</span>
+            </figcaption>
+          </figure>
+          <div class="project-copy">
+            <div class="project-meta">
+              <span class="tiny-label" data-i18n="projectType">MASTER’S RESEARCH</span><span class="mono" data-i18n="projectYears">2026</span>
+            </div>
+            <h3 data-i18n="projectTitle">Understanding actions,&#10;one hand at a time.</h3>
+            <p data-i18n="projectDescription">
+              Exploring fine-grained hand action understanding from an egocentric perspective, connecting 3D hand geometry with explicit physical
+              states and language-model reasoning.
+            </p>
+            <div class="tags">
+              <span data-i18n="projectTag1">Egocentric vision</span><span data-i18n="projectTag2">3D reconstruction</span
+              ><span data-i18n="projectTag3">Neuro-symbolic AI</span>
+            </div>
+            <a class="text-link" href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer"
+              ><span data-i18n="projectLink">Read the thesis</span><svg class="icon"><use href="#external" /></svg
+            ></a>
+          </div>
+          <details class="project-details">
+            <summary>
+              <span data-i18n="projectDetails">A closer look at the method</span><svg class="icon"><use href="#plus" /></svg>
+            </summary>
+            <div class="method-grid">
+              <div>
+                <span class="mono">01</span>
+                <h4 data-i18n="method1Title">Reconstruct</h4>
+                <p data-i18n="method1Text">Use HaMeR to recover a 3D hand mesh from a monocular view.</p>
+              </div>
+              <div>
+                <span class="mono">02</span>
+                <h4 data-i18n="method2Title">Ground</h4>
+                <p data-i18n="method2Text">Translate geometry into physical states, including pinch distance and wrist velocity.</p>
+              </div>
+              <div>
+                <span class="mono">03</span>
+                <h4 data-i18n="method3Title">Reason</h4>
+                <p data-i18n="method3Text">Provide these states to an LLM to reason about the observed hand action.</p>
+              </div>
+            </div>
+            <p class="method-scope" data-i18n="methodScope">This work is a proof of concept evaluated on a custom wrist-worn dataset.</p>
+          </details>
+        </article>
+      </section>
+
+      <section class="section publications-section shell" id="publications" aria-labelledby="publications-title">
+        <header class="section-heading">
+          <p class="eyebrow" data-i18n="publicationsEyebrow">03 / PUBLICATIONS &amp; WRITING</p>
+          <h2 id="publications-title" data-i18n="publicationsTitle">Research, in writing.</h2>
+        </header>
+        <article class="publication">
+          <div class="publication-year">
+            <span data-i18n="publicationYear">2026</span><svg class="icon"><use href="#book" /></svg>
+          </div>
+          <div class="publication-content">
+            <span class="tiny-label publication-type" data-i18n="publicationType">MASTER’S THESIS</span>
+            <h3>
+              <a href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer" data-i18n="thesisTitle"
+                >Egocentric hand action understanding: from multi-view geometric reconstruction to monocular neuro-symbolic reasoning</a
+              >
+            </h3>
+            <p class="publication-author">
+              <strong data-i18n="thesisAuthor">Yunxuan Zou</strong><span class="publication-separator"> · </span
+              ><span data-i18n="thesisInstitution">Nanyang Technological University</span>
+            </p>
+            <div class="publication-actions">
+              <a class="button button-small" href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer"
+                ><span data-i18n="repositoryLink">Repository</span><svg class="icon"><use href="#external" /></svg></a
+              ><button class="button button-small" id="cite-button" type="button">
+                <span aria-hidden="true">{ }</span><span data-i18n="citeLabel">Cite</span>
+              </button>
+            </div>
+            <p class="access-note" data-i18n="thesisAccess">Repository record available; full-text access is restricted by NTU.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section education-section shell" id="education" aria-labelledby="education-title">
+        <header class="section-heading">
+          <p class="eyebrow" data-i18n="educationEyebrow">04 / EDUCATION</p>
+          <h2 id="education-title" data-i18n="educationTitle">The path so far.</h2>
+        </header>
+        <div class="education-list">
+          <article class="education-item">
+            <div class="education-date"><span class="timeline-dot current"></span><span data-i18n="phdDate">2026 — Present</span></div>
+            <div class="education-content">
+              <h3><a href="https://www.szu.edu.cn/" target="_blank" rel="noopener noreferrer" data-i18n="phdSchool">Shenzhen University</a></h3>
+              <p class="degree" data-i18n="phdDegree">Ph.D. in Artificial Intelligence</p>
+              <p class="education-detail" data-i18n="phdDetail">Joint doctoral training with Shenzhen University of Advanced Technology</p>
+            </div>
+            <span class="education-location" data-i18n="phdLocation">Shenzhen, China</span>
+          </article>
+          <article class="education-item">
+            <div class="education-date"><span class="timeline-dot"></span><span data-i18n="mastersDate">2024 — 2026</span></div>
+            <div class="education-content">
+              <h3>
+                <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener noreferrer" data-i18n="mastersSchool"
+                  >Nanyang Technological University</a
+                >
+              </h3>
+              <p class="degree" data-i18n="mastersDegree">M.Sc. in Computer Science</p>
+              <p class="education-detail" data-i18n="mastersDetail">Thesis advised by Prof. Bihan Wen and Dr. Satoshi Tsutsui</p>
+            </div>
+            <span class="education-location" data-i18n="mastersLocation">Singapore</span>
+          </article>
+          <article class="education-item">
+            <div class="education-date"><span class="timeline-dot"></span><span data-i18n="bachelorsDate">2020 — 2024</span></div>
+            <div class="education-content">
+              <h3>
+                <a href="https://www.hit.edu.cn/" target="_blank" rel="noopener noreferrer" data-i18n="bachelorsSchool"
+                  >Harbin Institute of Technology</a
+                >
+              </h3>
+              <p class="degree" data-i18n="bachelorsDegree">B.Eng. in Measurement and Control Technology and Instrumentation</p>
+            </div>
+            <span class="education-location" data-i18n="bachelorsLocation">Harbin, China</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="shell contact-inner">
+          <div>
+            <p class="eyebrow" data-i18n="contactEyebrow">GET IN TOUCH</p>
+            <h2 id="contact-title" data-i18n="contactTitle">Good research starts&#10;with a conversation.</h2>
+            <p data-i18n="contactText">For research conversations and academic exchange, feel free to reach out.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:suat26070109@stu.suat-sz.edu.cn"
+              ><svg class="icon"><use href="#mail" /></svg><span data-i18n="contactEmail">Send an email</span
+              ><svg class="icon"><use href="#arrow" /></svg
+            ></a>
+            <div class="email-row">
+              <a href="mailto:suat26070109@stu.suat-sz.edu.cn">suat26070109@stu.suat-sz.edu.cn</a
+              ><button id="copy-email" class="icon-button" type="button" aria-label="Copy email address">
+                <svg class="icon"><use href="#copy" /></svg>
+              </button>
+            </div>
+            <a class="text-link github-link" href="https://github.com/akihixuan" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon"><use href="#github" /></svg><span>GitHub</span><svg class="icon"><use href="#external" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer shell">
+      <div>
+        <span class="footer-name">© 2026 Yunxuan Zou</span
+        ><span class="footer-note" data-i18n="footerRole">Language, intelligence &amp; discovery.</span>
       </div>
-      <figure class="hero-figure">
-        <div class="figure-top"><span class="tiny-label" data-i18n="diagramCaption">CONNECTED BY CURIOSITY</span><span class="figure-spark" aria-hidden="true">✳</span></div>
-        <div class="orbit-container"><img class="orbit-image" src="./assets/research-orbit.svg" width="500" height="390" alt="" fetchpriority="high"><span class="orbit-label label-language" data-i18n="diagramLanguage">Language</span><span class="orbit-label label-intelligence" data-i18n="diagramIntelligence">Intelligence</span><span class="orbit-label label-discovery" data-i18n="diagramDiscovery">Discovery</span></div>
-        <figcaption><span class="caption-index">FIG. 01</span><span data-i18n="diagramNote">A research journey across language, vision, and science.</span></figcaption>
-      </figure>
-    </section>
-
-    <section class="about-section shell" id="about" aria-labelledby="about-title">
-      <div><p class="eyebrow" data-i18n="aboutLabel">A LITTLE ABOUT ME</p><h2 id="about-title" data-i18n="aboutTitle">Curiosity, across disciplines.</h2></div>
-      <div class="about-copy"><p data-i18n-html="aboutText">I am a Ph.D. student in Artificial Intelligence at <a href="https://www.szu.edu.cn/" target="_blank" rel="noopener noreferrer">Shenzhen University</a>, in a joint doctoral training program with <a href="https://www.suat-sz.edu.cn/" target="_blank" rel="noopener noreferrer">Shenzhen University of Advanced Technology</a>.</p><p data-i18n-html="aboutAdvisors">I am advised by <a href="https://minyang.me/" target="_blank" rel="noopener noreferrer">Prof. Min Yang</a>, <a href="https://shiwen-ni.top/" target="_blank" rel="noopener noreferrer">Prof. Shiwen Ni</a>, and <a href="https://pengfeixu.com/" target="_blank" rel="noopener noreferrer">Prof. Pengfei Xu</a>.</p><p data-i18n="aboutPast">Previously, I received my M.Sc. in Computer Science from Nanyang Technological University and my B.Eng. from Harbin Institute of Technology.</p></div>
-    </section>
-
-    <section class="section research-section shell" id="research" aria-labelledby="research-title">
-      <header class="section-heading"><p class="eyebrow" data-i18n="researchEyebrow">01 / RESEARCH INTERESTS</p><h2 id="research-title" data-i18n="researchTitle">Language meets science.</h2><p class="section-lead" data-i18n="researchLead">Two connected directions shape my current research interests.</p></header>
-      <div class="research-grid">
-        <article class="research-item"><div class="research-item-top"><span class="research-symbol" aria-hidden="true"><svg viewBox="0 0 44 44"><path d="M8 9h28v20H23l-9 7v-7H8Z"/><path d="M15 16h14M15 22h9"/></svg></span><span class="research-number">01</span></div><p class="tiny-label" data-i18n="llmTag">LANGUAGE &amp; INTELLIGENCE</p><h3 data-i18n="llmTitle">Large Language Models</h3><p data-i18n="llmText">Understanding and working with language models is a central focus of my doctoral research in artificial intelligence.</p></article>
-        <article class="research-item"><div class="research-item-top"><span class="research-symbol" aria-hidden="true"><svg viewBox="0 0 44 44"><ellipse cx="22" cy="22" rx="18" ry="7" transform="rotate(45 22 22)"/><ellipse cx="22" cy="22" rx="18" ry="7" transform="rotate(-45 22 22)"/><circle cx="22" cy="22" r="2"/></svg></span><span class="research-number">02</span></div><p class="tiny-label" data-i18n="scienceTag">INTELLIGENCE &amp; DISCOVERY</p><h3 data-i18n="scienceTitle">AI for Science</h3><p data-i18n="scienceText">Exploring how artificial intelligence can support scientific inquiry and open new possibilities for discovery.</p></article>
+      <div class="footer-links">
+        <a href="./assets/Yunxuan_Zou_CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="footerCV">Curriculum vitae</a
+        ><a href="#top" class="text-link"
+          ><span data-i18n="footerTop">Back to top</span><svg class="icon up-arrow"><use href="#arrow" /></svg
+        ></a>
       </div>
-      <div class="research-foundations"><span class="tiny-label" data-i18n="foundationsLabel">RESEARCH FOUNDATIONS</span><p data-i18n="foundationsText">Egocentric vision · 3D hand reconstruction · Neuro-symbolic reasoning</p></div>
-    </section>
-
-    <section class="section projects-section shell" id="projects" aria-labelledby="projects-title">
-      <header class="section-heading"><p class="eyebrow" data-i18n="projectsEyebrow">02 / SELECTED PROJECT</p><h2 id="projects-title" data-i18n="projectsTitle">From perception to reasoning.</h2><p class="section-lead" data-i18n="projectsLead">My master’s research at Nanyang Technological University.</p></header>
-      <article class="project-card">
-        <figure class="project-figure"><div class="tiny-label" data-i18n="projectVisualLabel">GEOMETRY → STATES → REASONING</div><img src="./assets/hand-study.svg" width="400" height="390" alt="" loading="lazy"><figcaption><span class="caption-index">FIG. 02</span><span data-i18n="projectVisualNote">Conceptual method illustration</span></figcaption></figure>
-        <div class="project-copy"><div class="project-meta"><span class="tiny-label" data-i18n="projectType">MASTER’S RESEARCH</span><span class="mono" data-i18n="projectYears">2026</span></div><h3 data-i18n="projectTitle">Understanding actions,&#10;one hand at a time.</h3><p data-i18n="projectDescription">Exploring fine-grained hand action understanding from an egocentric perspective, connecting 3D hand geometry with explicit physical states and language-model reasoning.</p><div class="tags"><span data-i18n="projectTag1">Egocentric vision</span><span data-i18n="projectTag2">3D reconstruction</span><span data-i18n="projectTag3">Neuro-symbolic AI</span></div><a class="text-link" href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer"><span data-i18n="projectLink">Read the thesis</span><svg class="icon"><use href="#external"/></svg></a></div>
-        <details class="project-details"><summary><span data-i18n="projectDetails">A closer look at the method</span><svg class="icon"><use href="#plus"/></svg></summary><div class="method-grid"><div><span class="mono">01</span><h4 data-i18n="method1Title">Reconstruct</h4><p data-i18n="method1Text">Use HaMeR to recover a 3D hand mesh from a monocular view.</p></div><div><span class="mono">02</span><h4 data-i18n="method2Title">Ground</h4><p data-i18n="method2Text">Translate geometry into physical states, including pinch distance and wrist velocity.</p></div><div><span class="mono">03</span><h4 data-i18n="method3Title">Reason</h4><p data-i18n="method3Text">Provide these states to an LLM to reason about the observed hand action.</p></div></div><p class="method-scope" data-i18n="methodScope">This work is a proof of concept evaluated on a custom wrist-worn dataset.</p></details>
-      </article>
-    </section>
-
-    <section class="section publications-section shell" id="publications" aria-labelledby="publications-title">
-      <header class="section-heading"><p class="eyebrow" data-i18n="publicationsEyebrow">03 / PUBLICATIONS &amp; WRITING</p><h2 id="publications-title" data-i18n="publicationsTitle">Research, in writing.</h2></header>
-      <article class="publication"><div class="publication-year"><span data-i18n="publicationYear">2026</span><svg class="icon"><use href="#book"/></svg></div><div class="publication-content"><span class="tiny-label publication-type" data-i18n="publicationType">MASTER’S THESIS</span><h3><a href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer" data-i18n="thesisTitle">Egocentric hand action understanding: from multi-view geometric reconstruction to monocular neuro-symbolic reasoning</a></h3><p class="publication-author"><strong data-i18n="thesisAuthor">Yunxuan Zou</strong><span class="publication-separator"> · </span><span data-i18n="thesisInstitution">Nanyang Technological University</span></p><div class="publication-actions"><a class="button button-small" href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer"><span data-i18n="repositoryLink">Repository</span><svg class="icon"><use href="#external"/></svg></a><button class="button button-small" id="cite-button" type="button"><span aria-hidden="true">{ }</span><span data-i18n="citeLabel">Cite</span></button></div><p class="access-note" data-i18n="thesisAccess">Repository record available; full-text access is restricted by NTU.</p></div></article>
-    </section>
-
-    <section class="section education-section shell" id="education" aria-labelledby="education-title">
-      <header class="section-heading"><p class="eyebrow" data-i18n="educationEyebrow">04 / EDUCATION</p><h2 id="education-title" data-i18n="educationTitle">The path so far.</h2></header>
-      <div class="education-list">
-        <article class="education-item"><div class="education-date"><span class="timeline-dot current"></span><span data-i18n="phdDate">2026 — Present</span></div><div class="education-content"><h3><a href="https://www.szu.edu.cn/" target="_blank" rel="noopener noreferrer" data-i18n="phdSchool">Shenzhen University</a></h3><p class="degree" data-i18n="phdDegree">Ph.D. in Artificial Intelligence</p><p class="education-detail" data-i18n="phdDetail">Joint doctoral training with Shenzhen University of Advanced Technology</p></div><span class="education-location" data-i18n="phdLocation">Shenzhen, China</span></article>
-        <article class="education-item"><div class="education-date"><span class="timeline-dot"></span><span data-i18n="mastersDate">2024 — 2026</span></div><div class="education-content"><h3><a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener noreferrer" data-i18n="mastersSchool">Nanyang Technological University</a></h3><p class="degree" data-i18n="mastersDegree">M.Sc. in Computer Science</p><p class="education-detail" data-i18n="mastersDetail">Thesis advised by Prof. Bihan Wen and Dr. Satoshi Tsutsui</p></div><span class="education-location" data-i18n="mastersLocation">Singapore</span></article>
-        <article class="education-item"><div class="education-date"><span class="timeline-dot"></span><span data-i18n="bachelorsDate">2020 — 2024</span></div><div class="education-content"><h3><a href="https://www.hit.edu.cn/" target="_blank" rel="noopener noreferrer" data-i18n="bachelorsSchool">Harbin Institute of Technology</a></h3><p class="degree" data-i18n="bachelorsDegree">B.Eng. in Measurement and Control Technology and Instrumentation</p></div><span class="education-location" data-i18n="bachelorsLocation">Harbin, China</span></article>
+    </footer>
+    <dialog id="citation-dialog" aria-labelledby="citation-title">
+      <div class="dialog-header">
+        <h2 id="citation-title" data-i18n="citationTitle">Cite this thesis</h2>
+        <button id="close-citation" class="icon-button" type="button" aria-label="Close citation">
+          <svg class="icon"><use href="#close" /></svg>
+        </button>
       </div>
-    </section>
-
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell contact-inner"><div><p class="eyebrow" data-i18n="contactEyebrow">GET IN TOUCH</p><h2 id="contact-title" data-i18n="contactTitle">Good research starts&#10;with a conversation.</h2><p data-i18n="contactText">For research conversations and academic exchange, feel free to reach out.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:suat26070109@stu.suat-sz.edu.cn"><svg class="icon"><use href="#mail"/></svg><span data-i18n="contactEmail">Send an email</span><svg class="icon"><use href="#arrow"/></svg></a><div class="email-row"><a href="mailto:suat26070109@stu.suat-sz.edu.cn">suat26070109@stu.suat-sz.edu.cn</a><button id="copy-email" class="icon-button" type="button" aria-label="Copy email address"><svg class="icon"><use href="#copy"/></svg></button></div><a class="text-link github-link" href="https://github.com/akihixuan" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#github"/></svg><span>GitHub</span><svg class="icon"><use href="#external"/></svg></a></div></div></section>
-  </main>
-  <footer class="footer shell"><div><span class="footer-name">© 2026 Yunxuan Zou</span><span class="footer-note" data-i18n="footerRole">Language, intelligence &amp; discovery.</span></div><div class="footer-links"><a href="./assets/Yunxuan_Zou_CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="footerCV">Curriculum vitae</a><a href="#top" class="text-link"><span data-i18n="footerTop">Back to top</span><svg class="icon up-arrow"><use href="#arrow"/></svg></a></div></footer>
-  <dialog id="citation-dialog" aria-labelledby="citation-title"><div class="dialog-header"><h2 id="citation-title" data-i18n="citationTitle">Cite this thesis</h2><button id="close-citation" class="icon-button" type="button" aria-label="Close citation"><svg class="icon"><use href="#close"/></svg></button></div><pre id="bibtex-code" tabindex="0"></pre><div class="dialog-actions"><button id="copy-citation" class="button button-primary" type="button"><svg class="icon"><use href="#copy"/></svg><span data-i18n="citationCopy">Copy BibTeX</span></button><a id="download-citation" class="text-link" download="zou2026egocentric.bib"><span data-i18n="citationDownload">Download .bib</span><svg class="icon"><use href="#download"/></svg></a></div><p class="citation-status" id="citation-status" role="status" aria-live="polite"></p></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body>
+      <pre id="bibtex-code" tabindex="0"></pre>
+      <div class="dialog-actions">
+        <button id="copy-citation" class="button button-primary" type="button">
+          <svg class="icon"><use href="#copy" /></svg><span data-i18n="citationCopy">Copy BibTeX</span></button
+        ><a id="download-citation" class="text-link" download="zou2026egocentric.bib"
+          ><span data-i18n="citationDownload">Download .bib</span><svg class="icon"><use href="#download" /></svg
+        ></a>
+      </div>
+      <p class="citation-status" id="citation-status" role="status" aria-live="polite"></p>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
