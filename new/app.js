@@ -1,5 +1,6 @@
 (() => {
   "use strict";
+  document.documentElement.classList.add("js");
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
   const storage = {
@@ -53,10 +54,11 @@
     menu.setAttribute("aria-label", language === "zh" ? "主导航" : "Main navigation");
     storage.set("yz-language", language);
     closeMenu();
+    document.dispatchEvent(new CustomEvent("yz:language-change", { detail: { language } }));
   }
   function setTheme(theme) {
     document.documentElement.dataset.theme = theme;
-    $('meta[name="theme-color"]').content = theme === "dark" ? "#141e19" : "#f8f9f4";
+    $('meta[name="theme-color"]').content = theme === "dark" ? "#141c19" : "#f5f3ec";
     $("#theme-toggle").setAttribute("aria-pressed", String(theme === "dark"));
     storage.set("yz-theme", theme);
   }
@@ -110,7 +112,7 @@
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".site-header")) closeMenu();
   });
-  window.matchMedia("(min-width: 701px)").addEventListener("change", closeMenu);
+  window.matchMedia("(min-width: 901px)").addEventListener("change", closeMenu);
 
   $("#bibtex-code").textContent = window.siteConfig.bibtex;
   const bibtexBlob = new Blob([window.siteConfig.bibtex + "\n"], { type: "application/x-bibtex;charset=utf-8" });
@@ -141,6 +143,9 @@
       if (isActive) link.setAttribute("aria-current", "location");
       else link.removeAttribute("aria-current");
     });
+    const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+    document.documentElement.style.setProperty("--scroll-progress", scrollRange > 0 ? Math.min(1, window.scrollY / scrollRange) : 0);
+    document.querySelector(".site-header").classList.toggle("is-scrolled", window.scrollY > 20);
     scrollScheduled = false;
   }
   window.addEventListener(
@@ -153,6 +158,23 @@
     },
     { passive: true }
   );
+  // Content stays visible by default. Only animate elements once they enter the viewport.
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if ("IntersectionObserver" in window && !reducedMotion.matches) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08 }
+    );
+    $$(".about-section, .section-heading, .research-item, .project-card, .publication, .education-item, .contact-inner").forEach((element) => {
+      revealObserver.observe(element);
+    });
+  }
   applyLanguage(language);
   setTheme(storage.get("yz-theme") === "dark" ? "dark" : "light");
   updateNavigation();
