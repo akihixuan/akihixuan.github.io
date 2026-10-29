@@ -45,6 +45,9 @@
     $$("[data-i18n-html]").forEach((el) => {
       el.innerHTML = copy[el.dataset.i18nHtml];
     });
+    $$("[data-i18n-aria]").forEach((el) => {
+      el.setAttribute("aria-label", copy[el.dataset.i18nAria]);
+    });
     $("#language-switch").setAttribute("aria-label", copy.languageLabel);
     $(".lang-en").classList.toggle("active", language === "en");
     $(".lang-zh").classList.toggle("active", language === "zh");
@@ -58,7 +61,7 @@
   }
   function setTheme(theme) {
     document.documentElement.dataset.theme = theme;
-    $('meta[name="theme-color"]').content = theme === "dark" ? "#141c19" : "#f5f3ec";
+    $('meta[name="theme-color"]').content = "#121714";
     $("#theme-toggle").setAttribute("aria-pressed", String(theme === "dark"));
     storage.set("yz-theme", theme);
   }
@@ -107,7 +110,11 @@
   });
   $$(".main-nav a").forEach((link) => link.addEventListener("click", closeMenu));
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeMenu();
+    if (event.key === "Escape") {
+      const returnFocus = menu.classList.contains("open") && menu.contains(document.activeElement);
+      closeMenu();
+      if (returnFocus) menuButton.focus();
+    }
   });
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".site-header")) closeMenu();
@@ -133,7 +140,7 @@
   let scrollScheduled = false;
   function updateNavigation() {
     const sections = ["about", "research", "projects", "publications", "education"];
-    let active = "about";
+    let active = "";
     sections.forEach((id) => {
       if (document.getElementById(id).getBoundingClientRect().top <= 175) active = id;
     });

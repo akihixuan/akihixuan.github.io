@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" fill="none" aria-hidden="true">
+  <defs>
+    <pattern id="method-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="currentColor" stroke-opacity=".07" stroke-width=".7" />
+    </pattern>
+    <marker id="method-arrow" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="m1 1 5 3-5 3" stroke="currentColor" stroke-width="1.2" fill="none" />
+    </marker>
+  </defs>
+  <rect x="24" y="18" width="592" height="456" rx="4" fill="url(#method-grid)" />
+  <g stroke="currentColor" stroke-opacity=".18" stroke-width="1">
+    <path d="M24 48V18h30M586 18h30v30M616 444v30h-30M54 474H24v-30" />
+    <path d="M410 40v414" stroke-dasharray="2 7" />
+  </g>
+  <g class="method-geometry" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Palm boundary, five articulated digits, and wrist. A conceptual mesh, not measured data. -->
+    <path d="M155 444l-12-70-28-57-43-57-8-40 8-19 16-4 16 13 13 32 20 19 6-59-12-49-10-42 4-25 15-8 15 7 10 26 10 48 14 35 3-56-2-67 3-30 15-15 17 7 7 24 1 52 3 82 10-27 10-58 10-28 17-7 15 10 2 23-8 59-10 62 11-11 23-35 15-13 15 3 9 14-3 18-25 52-27 47-23 63-1 72" stroke-width="1.5" stroke-opacity=".65" />
+    <g stroke-width=".75" stroke-opacity=".34">
+      <path d="m143 374 46-18 31 14 40-10 27 11-19 30-14 43M155 444l34-88 31 14 9 74M143 374l77-4 48 31M155 444l65-74 34 74M143 374l86 70M189 356l79 45" />
+      <path d="m115 317 74 39-27-95-25 0-20-19-13-32M115 317l47-56 58 109 11-110 29 100 23-91 4 102 29-73M115 317l105 53-83-109 94-1 52 9 33 29M162 261l69-1 52 9-63 101M189 356l42-96 37 141M162 261l98 99" />
+      <path d="m72 260 35-18 30 19-22 56M64 220l23 5 17-15M72 201l15 24 20 17-35 18M88 197l-1 28 30 17M87 225l28 92M121 111l44 0M125 86l14 27 16-28M121 111l34 37-24 5M139 113l16 35 20 11M131 153l32 27 26 14M143 202l20-22 26 14-27 67M155 148l8 32-20 22M163 180l-1 81" />
+      <path d="M193 46l15 19 17-27M190 76l36 0M208 65l-2 53 21 10M192 137l14-19-16-42M192 137l39-9M206 118l5 73 19 19M189 194l22-3 19 19M211 191l20 69M189 194l42 66-1-50" />
+      <path d="m270 72 10 22 22-13M260 100l42 4M280 94l-14 66 28 3M250 158l16 2-6-60M250 158l44 5M266 160l-13 59 31 6M240 185l13 34 41-56M240 185l44 40M253 219l30 50M284 225l-1 44" />
+      <path d="m333 166 7 22 21-13M318 179l40 14M340 188l-24 42 18 13M295 214l21 16 42-37M295 214l39 29M316 230v68M283 269l51-26M283 269l33 29" />
+    </g>
+    <g stroke-width="2.2" stroke-opacity=".83">
+      <path d="m211 404 9-34-31-14-27-95-55-19-20-17-3-14M220 370l-58-109 1-81-8-32-16-35-1-19M220 370l11-110-20-69-5-73 2-53M220 370l40-10 23-91-30-50 13-59 14-66M260 360l23-91 33-39 24-42" />
+    </g>
+    <g fill="var(--method-node, #e6edf1)" stroke-width="1.4">
+      <circle cx="211" cy="404" r="5" /><circle cx="220" cy="370" r="5" />
+      <circle cx="189" cy="356" r="4" /><circle cx="260" cy="360" r="4" />
+      <circle cx="162" cy="261" r="5" /><circle cx="107" cy="242" r="4" /><circle cx="87" cy="225" r="4" /><circle cx="84" cy="211" r="3" />
+      <circle cx="163" cy="180" r="4" /><circle cx="155" cy="148" r="4" /><circle cx="139" cy="113" r="4" /><circle cx="138" cy="94" r="3" />
+      <circle cx="231" cy="260" r="5" /><circle cx="211" cy="191" r="4" /><circle cx="206" cy="118" r="4" /><circle cx="208" cy="65" r="3" />
+      <circle cx="283" cy="269" r="5" /><circle cx="253" cy="219" r="4" /><circle cx="266" cy="160" r="4" /><circle cx="280" cy="94" r="3" />
+      <circle cx="316" cy="230" r="4" /><circle cx="340" cy="188" r="3" />
+    </g>
+    <g transform="translate(445 57)">
+      <rect width="143" height="91" rx="8" stroke-width="1" stroke-opacity=".45" />
+      <path d="m19 63 24-30 28 32 22-45 30 39M19 63l52 2 52-6M43 33l50-13M43 33l50 32M71 65l22-45" stroke-width="1" stroke-opacity=".65" />
+      <g fill="currentColor" stroke="none"><circle cx="19" cy="63" r="2.5" /><circle cx="43" cy="33" r="2.5" /><circle cx="71" cy="65" r="2.5" /><circle cx="93" cy="20" r="2.5" /><circle cx="123" cy="59" r="2.5" /></g>
+    </g>
+  </g>
+  <g class="method-states" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M84 211 138 94" stroke-width="1.7" stroke-dasharray="4 5" />
+    <circle cx="84" cy="211" r="9" stroke-width="1.2" /><circle cx="138" cy="94" r="9" stroke-width="1.2" />
+    <path d="m76 209 16 4m38-121 16 4" stroke-width="1.7" />
+    <path d="M209 404c22 29 53 34 87 17" stroke-width="2" marker-end="url(#method-arrow)" />
+    <g fill="currentColor" stroke="none" font-family="Georgia, serif" font-style="italic" font-size="19">
+      <text x="88" y="153">d</text><text x="271" y="452">v</text>
+    </g>
+    <g transform="translate(445 204)">
+      <rect width="143" height="91" rx="8" stroke-width="1" stroke-opacity=".45" />
+      <path d="M21 28h101M21 63h101" stroke-width="1" stroke-opacity=".22" />
+      <path d="M30 28h43M30 63h70" stroke-width="2" />
+      <circle cx="73" cy="28" r="4" fill="currentColor" stroke="none" /><circle cx="100" cy="63" r="4" fill="currentColor" stroke="none" />
+      <g fill="currentColor" stroke="none" font-family="Georgia, serif" font-style="italic" font-size="15"><text x="16" y="32">d</text><text x="16" y="67">v</text></g>
+    </g>
+  </g>
+  <g class="method-reasoning" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M516 159v30M516 307v30" stroke-width="1.4" marker-end="url(#method-arrow)" />
+    <path d="m347 287 22 30v56h64" stroke-width="1" stroke-dasharray="3 6" stroke-opacity=".6" />
+    <g transform="translate(445 350)">
+      <rect width="143" height="91" rx="8" stroke-width="1" stroke-opacity=".45" />
+      <path d="M24 20h95v42H63L48 75V62H24Z" stroke-width="1.3" />
+      <path d="M38 34h36M38 47h64" stroke-width="1.5" stroke-opacity=".65" />
+      <g fill="currentColor" stroke="none"><circle cx="92" cy="34" r="2" /><circle cx="100" cy="34" r="2" /><circle cx="108" cy="34" r="2" /></g>
+    </g>
+  </g>
+</svg>

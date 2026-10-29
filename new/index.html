@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f5f3ec" />
+    <meta name="theme-color" content="#121714" />
     <meta
       name="description"
       content="Yunxuan Zou is a Ph.D. student in Artificial Intelligence at Shenzhen University. Research interests: large language models and AI for Science."
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="./analytics.css" />
     <script src="./content.js" defer></script>
     <script src="./app.js" defer></script>
+    <script src="./observatory.js" defer></script>
+    <script src="./method.js" defer></script>
     <script src="./analytics-config.js" defer></script>
     <script src="./analytics.js" defer></script>
     <script type="application/ld+json">
@@ -105,55 +107,70 @@
     </header>
 
     <main id="main">
-      <section class="hero shell" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <div class="eyebrow hero-eyebrow">
-            <span class="status-dot"></span><span data-i18n="heroRole">PH.D. STUDENT IN ARTIFICIAL INTELLIGENCE</span>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid shell">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow">
+              <span class="status-dot"></span><span data-i18n="heroRole">PH.D. STUDENT · ARTIFICIAL INTELLIGENCE</span>
+            </p>
+            <h1 id="hero-title">
+              <span>Yunxuan</span
+              ><span class="surname"
+                >Zou<span class="name-period">.</span
+                ><svg class="name-star" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 0v60M0 30h60M9 9l42 42M9 51 42 9" /></svg
+              ></span>
+            </h1>
+            <p class="hero-statement">
+              <span data-i18n="heroLine1">Language. Intelligence.</span><br /><em data-i18n="heroLine2">Scientific discovery.</em>
+            </p>
+            <p class="hero-intro" data-i18n="heroIntro">
+              I study large language models and AI for Science, exploring the connection between intelligent systems and scientific inquiry.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects"
+                ><span data-i18n="heroResearch">Explore my work</span><svg class="icon"><use href="#arrow" /></svg></a
+              ><a class="text-link" href="./media/Yunxuan_Zou_CV.pdf" target="_blank" rel="noopener noreferrer"
+                ><span data-i18n="heroCV">View CV</span><svg class="icon"><use href="#external" /></svg
+              ></a>
+            </div>
           </div>
-          <h1 id="hero-title" data-i18n="heroName">Yunxuan Zou</h1>
-          <p class="hero-statement">
-            <span data-i18n="heroLine1">Language. Intelligence.</span><br /><span class="text-accent" data-i18n="heroLine2"
-              >Scientific discovery.</span
+          <figure class="observatory">
+            <div class="field-top">
+              <span class="tiny-label" data-i18n="fieldLabel">A STUDY IN CONNECTION</span><span class="field-cross" aria-hidden="true">+</span>
+            </div>
+            <div
+              class="observatory-stage"
+              tabindex="0"
+              role="group"
+              data-i18n-aria="fieldDescription"
+              aria-label="Interactive abstract sculpture. Drag or use arrow keys to rotate. Space to pause."
             >
-          </p>
-          <p class="hero-intro" data-i18n="heroIntro">
-            I study large language models and AI for Science, exploring the connection between intelligent systems and scientific inquiry.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#research"
-              ><span data-i18n="heroResearch">Explore my research</span><svg class="icon"><use href="#arrow" /></svg></a
-            ><a class="text-link" href="./media/Yunxuan_Zou_CV.pdf" target="_blank" rel="noopener noreferrer"
-              ><span data-i18n="heroCV">View CV</span><svg class="icon"><use href="#external" /></svg
-            ></a>
-          </div>
-          <div class="hero-location">
-            <svg class="icon"><use href="#pin" /></svg><span data-i18n="location">Shenzhen, China</span><span class="location-rule"></span
-            ><span data-i18n="heroInstitution">Shenzhen University</span>
-          </div>
+              <img class="observatory-fallback" src="./media/observatory-fallback.svg" width="600" height="600" alt="" fetchpriority="high" />
+              <canvas id="observatory-canvas" aria-hidden="true"></canvas>
+            </div>
+            <figcaption class="field-bottom">
+              <span class="field-hint" data-i18n="fieldHint">Drag to explore</span>
+              <div class="field-controls">
+                <button type="button" id="field-motion"><span id="field-motion-text" data-i18n="fieldPause">Pause</span></button
+                ><button type="button" id="field-reset" data-i18n="fieldReset">Reset</button>
+              </div>
+            </figcaption>
+            <span id="field-status" class="sr-only" role="status" aria-live="polite"></span>
+          </figure>
         </div>
-        <figure class="hero-figure" aria-label="Abstract scientific orbital study">
-          <div class="figure-top">
-            <span class="tiny-label" data-i18n="diagramCaption">CONNECTED BY CURIOSITY</span><span class="figure-spark" aria-hidden="true">↗</span>
-          </div>
-          <div class="orbit-container">
-            <img class="orbit-image" src="./media/research-orbit.svg" width="600" height="500" alt="" fetchpriority="high" /><span
-              class="orbit-label label-language"
-              data-i18n="diagramLanguage"
-              >Language</span
-            ><span class="orbit-label label-intelligence" data-i18n="diagramIntelligence">Intelligence</span
-            ><span class="orbit-label label-discovery" data-i18n="diagramDiscovery">Discovery</span>
-          </div>
-          <figcaption>
-            <span class="caption-index">FIG. 01 —</span><span data-i18n="diagramNote">A research journey across language, vision, and science.</span>
-          </figcaption>
-        </figure>
+        <div class="hero-ledger shell">
+          <div><span class="tiny-label" data-i18n="ledgerCurrently">CURRENTLY</span><span data-i18n="heroInstitution">Shenzhen University</span></div>
+          <div><span class="tiny-label" data-i18n="ledgerFocus">RESEARCH FOCUS</span><span>LLMs &amp; AI for Science</span></div>
+          <a href="#about" class="ledger-scroll"
+            ><span data-i18n="ledgerScroll">A little more about me</span><svg class="icon down-arrow"><use href="#arrow" /></svg
+          ></a>
+        </div>
       </section>
-
       <section class="about-section shell" id="about" aria-labelledby="about-title">
         <div class="about-heading">
-          <span class="section-mark" aria-hidden="true">00</span>
-          <p class="eyebrow" data-i18n="aboutLabel">A LITTLE ABOUT ME</p>
-          <h2 id="about-title" data-i18n="aboutTitle">Curiosity, across disciplines.</h2>
+          <span class="section-mark" aria-hidden="true">01 /</span>
+          <p class="eyebrow" data-i18n="aboutLabel">THE PERSON BEHIND THE RESEARCH</p>
+          <h2 id="about-title" data-i18n="aboutTitle">Driven by curiosity. Grounded in science.</h2>
         </div>
         <div class="about-copy">
           <p data-i18n-html="aboutText">
@@ -175,10 +192,10 @@
 
       <section class="section research-section shell" id="research" aria-labelledby="research-title">
         <header class="section-heading">
-          <span class="section-mark" aria-hidden="true">01</span>
-          <p class="eyebrow" data-i18n="researchEyebrow">01 / RESEARCH INTERESTS</p>
-          <h2 id="research-title" data-i18n="researchTitle">Language meets science.</h2>
-          <p class="section-lead" data-i18n="researchLead">Two connected directions shape my current research interests.</p>
+          <span class="section-mark" aria-hidden="true">02 /</span>
+          <p class="eyebrow" data-i18n="researchEyebrow">RESEARCH INTERESTS</p>
+          <h2 id="research-title" data-i18n="researchTitle">Two directions. One curious mind.</h2>
+          <p class="section-lead" data-i18n="researchLead">I am interested in how we build intelligent systems—and what they can help us discover.</p>
         </header>
         <div class="research-grid">
           <article class="research-item">
@@ -219,24 +236,17 @@
 
       <section class="section projects-section shell" id="projects" aria-labelledby="projects-title">
         <header class="section-heading">
-          <span class="section-mark" aria-hidden="true">02</span>
-          <p class="eyebrow" data-i18n="projectsEyebrow">02 / SELECTED PROJECT</p>
-          <h2 id="projects-title" data-i18n="projectsTitle">From perception to reasoning.</h2>
-          <p class="section-lead" data-i18n="projectsLead">My master’s research at Nanyang Technological University.</p>
+          <span class="section-mark" aria-hidden="true">03 /</span>
+          <p class="eyebrow" data-i18n="projectsEyebrow">SELECTED WORK</p>
+          <h2 id="projects-title" data-i18n="projectsTitle">Seeing is only the beginning.</h2>
+          <p class="section-lead" data-i18n="projectsLead">An exploration of perception, geometry, and reasoning.</p>
         </header>
         <article class="project-card">
-          <figure class="project-figure">
-            <div class="tiny-label" data-i18n="projectVisualLabel">GEOMETRY → STATES → REASONING</div>
-            <img src="./media/hand-study.svg" width="400" height="390" alt="" loading="lazy" />
-            <figcaption>
-              <span class="caption-index">FIG. 02</span><span data-i18n="projectVisualNote">Conceptual method illustration</span>
-            </figcaption>
-          </figure>
           <div class="project-copy">
             <div class="project-meta">
               <span class="tiny-label" data-i18n="projectType">MASTER’S RESEARCH</span><span class="mono" data-i18n="projectYears">2026</span>
             </div>
-            <h3 data-i18n="projectTitle">Understanding actions,&#10;one hand at a time.</h3>
+            <h3 data-i18n="projectTitle">Understanding actions, one hand at a time.</h3>
             <p data-i18n="projectDescription">
               Exploring fine-grained hand action understanding from an egocentric perspective, connecting 3D hand geometry with explicit physical
               states and language-model reasoning.
@@ -246,40 +256,183 @@
               ><span data-i18n="projectTag3">Neuro-symbolic AI</span>
             </div>
             <a class="text-link" href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer"
-              ><span data-i18n="projectLink">Read the thesis</span><svg class="icon"><use href="#external" /></svg
+              ><span data-i18n="projectLink">Thesis record</span><svg class="icon"><use href="#external" /></svg
             ></a>
           </div>
-          <details class="project-details">
-            <summary>
-              <span data-i18n="projectDetails">A closer look at the method</span><svg class="icon"><use href="#plus" /></svg>
-            </summary>
-            <div class="method-grid">
-              <div>
-                <span class="mono">01</span>
-                <h4 data-i18n="method1Title">Reconstruct</h4>
+          <div class="method-explorer" data-step="0">
+            <div class="method-visual">
+              <div class="method-visual-top">
+                <span class="tiny-label" data-i18n="methodFigureLabel">METHOD STUDY / CONCEPTUAL</span
+                ><span class="diagram-cross" aria-hidden="true">+</span>
+              </div>
+              <div class="method-art">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" fill="none" aria-hidden="true">
+                  <defs>
+                    <pattern id="method-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                      <path d="M32 0H0V32" stroke="currentColor" stroke-opacity=".07" stroke-width=".7" />
+                    </pattern>
+                    <marker id="method-arrow" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="m1 1 5 3-5 3" stroke="currentColor" stroke-width="1.2" fill="none" />
+                    </marker>
+                  </defs>
+                  <rect x="24" y="18" width="592" height="456" rx="4" fill="url(#method-grid)" />
+                  <g stroke="currentColor" stroke-opacity=".18" stroke-width="1">
+                    <path d="M24 48V18h30M586 18h30v30M616 444v30h-30M54 474H24v-30" />
+                    <path d="M410 40v414" stroke-dasharray="2 7" />
+                  </g>
+                  <g class="method-geometry" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Palm boundary, five articulated digits, and wrist. A conceptual mesh, not measured data. -->
+                    <path
+                      d="M155 444l-12-70-28-57-43-57-8-40 8-19 16-4 16 13 13 32 20 19 6-59-12-49-10-42 4-25 15-8 15 7 10 26 10 48 14 35 3-56-2-67 3-30 15-15 17 7 7 24 1 52 3 82 10-27 10-58 10-28 17-7 15 10 2 23-8 59-10 62 11-11 23-35 15-13 15 3 9 14-3 18-25 52-27 47-23 63-1 72"
+                      stroke-width="1.5"
+                      stroke-opacity=".65"
+                    />
+                    <g stroke-width=".75" stroke-opacity=".34">
+                      <path
+                        d="m143 374 46-18 31 14 40-10 27 11-19 30-14 43M155 444l34-88 31 14 9 74M143 374l77-4 48 31M155 444l65-74 34 74M143 374l86 70M189 356l79 45"
+                      />
+                      <path
+                        d="m115 317 74 39-27-95-25 0-20-19-13-32M115 317l47-56 58 109 11-110 29 100 23-91 4 102 29-73M115 317l105 53-83-109 94-1 52 9 33 29M162 261l69-1 52 9-63 101M189 356l42-96 37 141M162 261l98 99"
+                      />
+                      <path
+                        d="m72 260 35-18 30 19-22 56M64 220l23 5 17-15M72 201l15 24 20 17-35 18M88 197l-1 28 30 17M87 225l28 92M121 111l44 0M125 86l14 27 16-28M121 111l34 37-24 5M139 113l16 35 20 11M131 153l32 27 26 14M143 202l20-22 26 14-27 67M155 148l8 32-20 22M163 180l-1 81"
+                      />
+                      <path
+                        d="M193 46l15 19 17-27M190 76l36 0M208 65l-2 53 21 10M192 137l14-19-16-42M192 137l39-9M206 118l5 73 19 19M189 194l22-3 19 19M211 191l20 69M189 194l42 66-1-50"
+                      />
+                      <path
+                        d="m270 72 10 22 22-13M260 100l42 4M280 94l-14 66 28 3M250 158l16 2-6-60M250 158l44 5M266 160l-13 59 31 6M240 185l13 34 41-56M240 185l44 40M253 219l30 50M284 225l-1 44"
+                      />
+                      <path
+                        d="m333 166 7 22 21-13M318 179l40 14M340 188l-24 42 18 13M295 214l21 16 42-37M295 214l39 29M316 230v68M283 269l51-26M283 269l33 29"
+                      />
+                    </g>
+                    <g stroke-width="2.2" stroke-opacity=".83">
+                      <path
+                        d="m211 404 9-34-31-14-27-95-55-19-20-17-3-14M220 370l-58-109 1-81-8-32-16-35-1-19M220 370l11-110-20-69-5-73 2-53M220 370l40-10 23-91-30-50 13-59 14-66M260 360l23-91 33-39 24-42"
+                      />
+                    </g>
+                    <g fill="var(--method-node, #e6edf1)" stroke-width="1.4">
+                      <circle cx="211" cy="404" r="5" />
+                      <circle cx="220" cy="370" r="5" />
+                      <circle cx="189" cy="356" r="4" />
+                      <circle cx="260" cy="360" r="4" />
+                      <circle cx="162" cy="261" r="5" />
+                      <circle cx="107" cy="242" r="4" />
+                      <circle cx="87" cy="225" r="4" />
+                      <circle cx="84" cy="211" r="3" />
+                      <circle cx="163" cy="180" r="4" />
+                      <circle cx="155" cy="148" r="4" />
+                      <circle cx="139" cy="113" r="4" />
+                      <circle cx="138" cy="94" r="3" />
+                      <circle cx="231" cy="260" r="5" />
+                      <circle cx="211" cy="191" r="4" />
+                      <circle cx="206" cy="118" r="4" />
+                      <circle cx="208" cy="65" r="3" />
+                      <circle cx="283" cy="269" r="5" />
+                      <circle cx="253" cy="219" r="4" />
+                      <circle cx="266" cy="160" r="4" />
+                      <circle cx="280" cy="94" r="3" />
+                      <circle cx="316" cy="230" r="4" />
+                      <circle cx="340" cy="188" r="3" />
+                    </g>
+                    <g transform="translate(445 57)">
+                      <rect width="143" height="91" rx="8" stroke-width="1" stroke-opacity=".45" />
+                      <path
+                        d="m19 63 24-30 28 32 22-45 30 39M19 63l52 2 52-6M43 33l50-13M43 33l50 32M71 65l22-45"
+                        stroke-width="1"
+                        stroke-opacity=".65"
+                      />
+                      <g fill="currentColor" stroke="none">
+                        <circle cx="19" cy="63" r="2.5" />
+                        <circle cx="43" cy="33" r="2.5" />
+                        <circle cx="71" cy="65" r="2.5" />
+                        <circle cx="93" cy="20" r="2.5" />
+                        <circle cx="123" cy="59" r="2.5" />
+                      </g>
+                    </g>
+                  </g>
+                  <g class="method-states" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M84 211 138 94" stroke-width="1.7" stroke-dasharray="4 5" />
+                    <circle cx="84" cy="211" r="9" stroke-width="1.2" />
+                    <circle cx="138" cy="94" r="9" stroke-width="1.2" />
+                    <path d="m76 209 16 4m38-121 16 4" stroke-width="1.7" />
+                    <path d="M209 404c22 29 53 34 87 17" stroke-width="2" marker-end="url(#method-arrow)" />
+                    <g fill="currentColor" stroke="none" font-family="Georgia, serif" font-style="italic" font-size="19">
+                      <text x="88" y="153">d</text>
+                      <text x="271" y="452">v</text>
+                    </g>
+                    <g transform="translate(445 204)">
+                      <rect width="143" height="91" rx="8" stroke-width="1" stroke-opacity=".45" />
+                      <path d="M21 28h101M21 63h101" stroke-width="1" stroke-opacity=".22" />
+                      <path d="M30 28h43M30 63h70" stroke-width="2" />
+                      <circle cx="73" cy="28" r="4" fill="currentColor" stroke="none" />
+                      <circle cx="100" cy="63" r="4" fill="currentColor" stroke="none" />
+                      <g fill="currentColor" stroke="none" font-family="Georgia, serif" font-style="italic" font-size="15">
+                        <text x="16" y="32">d</text>
+                        <text x="16" y="67">v</text>
+                      </g>
+                    </g>
+                  </g>
+                  <g class="method-reasoning" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M516 159v30M516 307v30" stroke-width="1.4" marker-end="url(#method-arrow)" />
+                    <path d="m347 287 22 30v56h64" stroke-width="1" stroke-dasharray="3 6" stroke-opacity=".6" />
+                    <g transform="translate(445 350)">
+                      <rect width="143" height="91" rx="8" stroke-width="1" stroke-opacity=".45" />
+                      <path d="M24 20h95v42H63L48 75V62H24Z" stroke-width="1.3" />
+                      <path d="M38 34h36M38 47h64" stroke-width="1.5" stroke-opacity=".65" />
+                      <g fill="currentColor" stroke="none">
+                        <circle cx="92" cy="34" r="2" />
+                        <circle cx="100" cy="34" r="2" />
+                        <circle cx="108" cy="34" r="2" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p class="method-caption" data-i18n="projectVisualNote">Conceptual illustration · not an inference demo</p>
+            </div>
+            <div class="method-navigation" role="group" data-i18n-aria="methodNavigation" aria-label="Explore the research method">
+              <button type="button" data-method-step="0" aria-pressed="true">
+                <span class="mono">01</span><span data-i18n="method1Title">Reconstruct</span><span class="method-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" data-method-step="1" aria-pressed="false">
+                <span class="mono">02</span><span data-i18n="method2Title">Ground</span><span class="method-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" data-method-step="2" aria-pressed="false">
+                <span class="mono">03</span><span data-i18n="method3Title">Reason</span><span class="method-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <div class="method-explanation" aria-live="polite" aria-atomic="true">
+              <div class="method-panel" data-method-panel="0">
+                <p class="tiny-label" data-i18n="method1Label">MONOCULAR IMAGE → 3D GEOMETRY</p>
+                <h4 data-i18n="method1Heading">Recover the shape of a hand.</h4>
                 <p data-i18n="method1Text">Use HaMeR to recover a 3D hand mesh from a monocular view.</p>
               </div>
-              <div>
-                <span class="mono">02</span>
-                <h4 data-i18n="method2Title">Ground</h4>
+              <div class="method-panel" data-method-panel="1">
+                <p class="tiny-label" data-i18n="method2Label">3D GEOMETRY → PHYSICAL STATES</p>
+                <h4 data-i18n="method2Heading">Give geometry physical meaning.</h4>
                 <p data-i18n="method2Text">Translate geometry into physical states, including pinch distance and wrist velocity.</p>
               </div>
-              <div>
-                <span class="mono">03</span>
-                <h4 data-i18n="method3Title">Reason</h4>
+              <div class="method-panel" data-method-panel="2">
+                <p class="tiny-label" data-i18n="method3Label">PHYSICAL STATES → ACTION REASONING</p>
+                <h4 data-i18n="method3Heading">Connect perception with reasoning.</h4>
                 <p data-i18n="method3Text">Provide these states to an LLM to reason about the observed hand action.</p>
               </div>
             </div>
-            <p class="method-scope" data-i18n="methodScope">This work is a proof of concept evaluated on a custom wrist-worn dataset.</p>
-          </details>
+          </div>
+          <p class="method-scope">
+            <span class="scope-dot" aria-hidden="true"></span
+            ><span data-i18n="methodScope">This work is a proof of concept evaluated on a custom wrist-worn dataset.</span>
+          </p>
         </article>
       </section>
 
       <section class="section publications-section shell" id="publications" aria-labelledby="publications-title">
         <header class="section-heading">
-          <span class="section-mark" aria-hidden="true">03</span>
-          <p class="eyebrow" data-i18n="publicationsEyebrow">03 / PUBLICATIONS &amp; WRITING</p>
-          <h2 id="publications-title" data-i18n="publicationsTitle">Research, in writing.</h2>
+          <span class="section-mark" aria-hidden="true">04 /</span>
+          <p class="eyebrow" data-i18n="publicationsEyebrow">PUBLICATIONS &amp; WRITING</p>
+          <h2 id="publications-title" data-i18n="publicationsTitle">On the record.</h2>
         </header>
         <article class="publication">
           <div class="publication-year">
@@ -298,7 +451,7 @@
             </p>
             <div class="publication-actions">
               <a class="button button-small" href="https://hdl.handle.net/10356/214385" target="_blank" rel="noopener noreferrer"
-                ><span data-i18n="repositoryLink">Repository</span><svg class="icon"><use href="#external" /></svg></a
+                ><span data-i18n="repositoryLink">Thesis record</span><svg class="icon"><use href="#external" /></svg></a
               ><button class="button button-small" id="cite-button" type="button">
                 <span aria-hidden="true">{ }</span><span data-i18n="citeLabel">Cite</span>
               </button>
@@ -310,9 +463,9 @@
 
       <section class="section education-section shell" id="education" aria-labelledby="education-title">
         <header class="section-heading">
-          <span class="section-mark" aria-hidden="true">04</span>
-          <p class="eyebrow" data-i18n="educationEyebrow">04 / EDUCATION</p>
-          <h2 id="education-title" data-i18n="educationTitle">The path so far.</h2>
+          <span class="section-mark" aria-hidden="true">05 /</span>
+          <p class="eyebrow" data-i18n="educationEyebrow">EDUCATION</p>
+          <h2 id="education-title" data-i18n="educationTitle">A path across disciplines.</h2>
         </header>
         <div class="education-list">
           <article class="education-item">
@@ -356,8 +509,8 @@
         <div class="shell contact-inner">
           <div>
             <p class="eyebrow" data-i18n="contactEyebrow">GET IN TOUCH</p>
-            <h2 id="contact-title" data-i18n="contactTitle">Good research starts&#10;with a conversation.</h2>
-            <p data-i18n="contactText">For research conversations and academic exchange, feel free to reach out.</p>
+            <h2 id="contact-title" data-i18n="contactTitle">Let’s connect.</h2>
+            <p data-i18n="contactText">Research ideas, thoughtful questions, and interesting conversations are always welcome.</p>
           </div>
           <div class="contact-actions">
             <a class="button button-primary" href="mailto:suat26070109@stu.suat-sz.edu.cn"
@@ -378,10 +531,7 @@
       </section>
     </main>
     <footer class="footer shell">
-      <div>
-        <span class="footer-name">© 2026 Yunxuan Zou</span
-        ><span class="footer-note" data-i18n="footerRole">Language, intelligence &amp; discovery.</span>
-      </div>
+      <div><span class="footer-name">© 2026 Yunxuan Zou</span><span class="footer-note" data-i18n="footerRole">Built around curiosity.</span></div>
       <div class="footer-links">
         <a href="./media/Yunxuan_Zou_CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="footerCV">Curriculum vitae</a
         ><a href="#top" class="text-link"
