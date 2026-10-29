@@ -31,6 +31,19 @@
 .site-analytics [data-analytics-dashboard]:hover {
   color: var(--accent);
 }
+.analytics-retry {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.analytics-retry:hover {
+  color: var(--accent);
+}
 .site-analytics [hidden] {
   display: none;
 }
